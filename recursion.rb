@@ -33,3 +33,17 @@ end
 # p gamma_fnc(1)  # => returns 1
 # p gamma_fnc(4)  # => returns 6
 # p gamma_fnc(8)  # => returns 5040
+
+def ice_cream_shop(flavors, favorite)
+  return false if flavors.empty?
+  return true if flavors.last == favorite
+
+  ice_cream_shop(flavors[0...-1], favorite)
+end
+
+
+# p ice_cream_shop(['vanilla', 'strawberry'], 'blue moon')  # => returns false
+# p ice_cream_shop(['pistachio', 'green tea', 'chocolate', 'mint chip'], 'green tea')  # => returns true
+# p ice_cream_shop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea salt caramel'], 'pistachio')  # => returns false
+# p ice_cream_shop(['moose tracks'], 'moose tracks')  # => returns true
+# p ice_cream_shop([], 'honey lavender')  # => returns false
