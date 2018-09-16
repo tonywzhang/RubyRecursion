@@ -47,3 +47,15 @@ end
 # p ice_cream_shop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea salt caramel'], 'pistachio')  # => returns false
 # p ice_cream_shop(['moose tracks'], 'moose tracks')  # => returns true
 # p ice_cream_shop([], 'honey lavender')  # => returns false
+
+def reverse(string)
+  return "" if string.empty?
+  reverse(string[1..-1]) + string[0]
+end
+
+# p reverse("house") # => "esuoh"
+# p reverse("dog") # => "god"
+# p reverse("atom") # => "mota"
+# p reverse("q") # => "q"
+# p reverse("id") # => "di"
+# p reverse("") # => ""
